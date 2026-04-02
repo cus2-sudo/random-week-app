@@ -66,5 +66,9 @@ if st.button("🎯 Chọn món hôm nay"):
     result, used = pick_today()
     st.success(f"👉 Hôm nay ăn: {result}")
 
+if st.button("🔄 Reset tuần"):
+    supabase.table("weekly_choices").update({"used": []}).eq("week", get_week()).execute()
+    st.success("✅ Đã reset tuần!")
+
 data = get_data()
 st.write("📅 Đã ăn trong tuần:", data["used"])
