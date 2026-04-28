@@ -16,6 +16,7 @@ choices = [
     "Bún riêu",
     "Cơm gà xối mỡ",
     "Bún cá"
+    "Bún sườn mọc"
 ]
 
 def get_week():
